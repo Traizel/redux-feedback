@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
-function Qthree() {
+function Qthree({classes}) {
 
     const feedbackStore = useSelector(store => store.feedbackReducer);
     const dispatch = useDispatch();
@@ -12,6 +13,7 @@ function Qthree() {
             <h1>How well are you being supported?</h1>
             <br />
             <h4>Support?</h4>
+            <div>
             <input type="number" onChange={e => {
                 let support = e.target.value;
                 console.log(support);
@@ -22,13 +24,14 @@ function Qthree() {
                     }
                 });
             }} />
-            <button onClick={e => {
+            <Button className={classes.root} onClick={e => {
                 if (feedbackStore.support === '') {
                     alert('Please submit a value!')
                 } else {
                     history.push('/4');
                 }
-            }}>Next</button>
+            }}>Next</Button>
+            </div>
         </>
     );
 }

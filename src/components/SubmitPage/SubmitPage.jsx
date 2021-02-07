@@ -1,19 +1,18 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
-function Home({classes}) {
+function Submit({classes}) {
 
     const history = useHistory();
-    console.log(classes);
 
     return (
         <div>
-            <h1>Give yourself some Feedback!</h1>
+            <h1>Thanks for your Feedback!</h1>
             <Button className={classes.root} onClick={e => {
-                history.push('/1');
-            }}>Start!</Button>
+                history.push('/');
+            }}>Submit another!</Button>
         </div>
     );
 }
 
-export default Home;
+export default Submit;

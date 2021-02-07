@@ -3,10 +3,10 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #52154E;
   min-height: 70px;
   padding: 20px;
-  color: white;
+  color: #EFE9E7;
   margin-bottom: 20px;
 }
 
@@ -20,4 +20,32 @@
 
 h4 {
   font-style: italic;
+  text-align: center;
+  font-family: fantasy;
+  font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+  text-align: center;
+}
+
+input {
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  color: #111344;
+  font-size: larger;
+  font-weight: 800;
+  background-color: #DAE0F2;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div {
+  text-align: center;
 }

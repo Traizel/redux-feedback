@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
-function Comments() {
+function Comments({classes}) {
 
     const feedbackStore = useSelector(store => store.feedbackReducer);
     const dispatch = useDispatch();
@@ -12,7 +13,8 @@ function Comments() {
             <h1>Any comments you want to leave?</h1>
             <br />
             <h4>Comments?</h4>
-            <input type="number" onChange={e => {
+            <div>
+            <input type="text" onChange={e => {
                 let comments = e.target.value;
                 console.log(comments);
                 dispatch({
@@ -22,9 +24,10 @@ function Comments() {
                     }
                 });
             }} />
-            <button onClick={e => {
+            <Button className={classes.root} onClick={e => {
                 history.push('/5');
-            }}>Next</button>
+            }}>Next</Button>
+            </div>
         </>
     );
 }
